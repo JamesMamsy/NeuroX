@@ -163,8 +163,8 @@ def _train_probe(
 
     optimizer = torch.optim.Adam(probe.parameters(), lr=learning_rate)
 
-    X_tensor = torch.from_numpy(X_train)
-    y_tensor = torch.from_numpy(y_train)
+    X_tensor = torch.from_numpy(X_train).long()
+    y_tensor = torch.from_numpy(y_train).long()
 
     for epoch in range(num_epochs):
         num_tokens = 0
