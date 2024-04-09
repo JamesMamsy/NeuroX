@@ -46,7 +46,9 @@ def accuracy(preds, labels):
     """
     preds = _numpyfy(preds)
     labels = _numpyfy(labels)
-    return (preds == labels).mean()
+
+    #CHANGE TO LIBRARY, HAD A BUG HERE
+    return np.mean((preds == labels))
 
 
 import json
